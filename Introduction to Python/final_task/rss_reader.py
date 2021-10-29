@@ -1,4 +1,3 @@
-""" python C:/Users/Анна/Desktop/Аня/Учеба/Python/Pr1/"Introduction to Python"/final_task/rss_reader.py https://news.yahoo.com/rss/"""
 import reader_obj
 import logging
 
