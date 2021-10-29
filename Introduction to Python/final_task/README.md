@@ -44,3 +44,18 @@ optional arguments:
   --verbose      Outputs verbose status messages
   --limit LIMIT  Limit news topics if this parameter provided
 ```
+## Distribution
+```
+> pip install --editable .
+```
+### Note
+Run this command from program folder
+### Execution
+#### With CLI
+```
+> rss_reader [url] [-h] [--version] [--json] [--verbose] [--limit LIMIT]
+```
+#### Whithout CLI
+```
+> python rss_reader.py [url] [-h] [--version] [--json] [--verbose] [--limit LIMIT]
+```
