@@ -1,8 +1,13 @@
 # RSS-reader
+
 ## Description
+
 RSS reader is a command-line utility which receives RSS URL and prints results in human-readable format.
+
 ## Formats
+
 ### Console output
+
 ```bash
 $ rss_reader.py "https://news.yahoo.com/rss/" --limit 1
 
@@ -13,11 +18,15 @@ Date: Fri, 29 Oct 2021 04:12:38
 Source: Associated Press
 Source URL: http://www.ap.org/
 ```
+
 ### JSON output
+
 ```bash
 $ rss_reader.py "https://news.yahoo.com/rss/" --limit 1 --json
 ```
+
 #### news.json
+
 ```
 [
   {
@@ -30,7 +39,9 @@ $ rss_reader.py "https://news.yahoo.com/rss/" --limit 1 --json
   }
 ]
 ```
+
 ## Usage
+
 ```
 usage: rss_reader.py [-h] [--version] [--json] [--verbose] [--limit LIMIT] [url]
 
@@ -43,19 +54,34 @@ optional arguments:
   --json         Prints result as JSON in stdout
   --verbose      Outputs verbose status messages
   --limit LIMIT  Limit news topics if this parameter provided
+  --date DATE    Find news in cache by date
 ```
+
 ## Distribution
+
 ```
 > pip install --editable .
 ```
+
 ### Note
+
 Run this command from program folder
+
 ### Execution
+
 #### With CLI
+
 ```
 > rss_reader [url] [-h] [--version] [--json] [--verbose] [--limit LIMIT]
 ```
+
 #### Whithout CLI
+
 ```
 > python rss_reader.py [url] [-h] [--version] [--json] [--verbose] [--limit LIMIT]
 ```
+
+## News caching
+
+The RSS news are stored in a local storage while reading. New optional argument --date take a date in ```%Y%m%d```
+format. For example: ```--date 20191020``` Here date means actual publishing date.
